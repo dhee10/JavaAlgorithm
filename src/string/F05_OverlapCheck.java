@@ -1,7 +1,7 @@
 package string;
 import java.util.Arrays;
 import java.util.Scanner;
-
+//test
 public class F05_OverlapCheck {
     public char sol(int n, int[] arr) {
         char result = 'U';
