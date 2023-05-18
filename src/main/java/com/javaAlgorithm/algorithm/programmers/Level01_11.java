@@ -12,52 +12,29 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Level01_11 {
-    public static long solution(long s) {
-        String[] list = String.valueOf(s).split("");
-        Arrays.sort(list);
+    public static boolean solution(int x) {
+        // x의 각 자릿수 떼기
+        String stringValue = String.valueOf(x);
+        String[] stringArray = stringValue.split("");
 
-        StringBuilder sb = new StringBuilder();
-        for (String l : list) {
-            sb.append(l);
+        int total = 0;
+        // 자리수를 다 더한 값%x 해서 =0 인지 확인
+        for (String s : stringArray) {
+            total += Integer.parseInt(s);
         }
-        return Long.parseLong(sb.reverse().toString());
+
+        return (x % total == 0)? true:false;
     }
-
-    public static long solution2(long n) {
-        String answer = "";
-        String str = Long.toString(n);
-
-        int[] arr = new int[str.length()];
-
-        //long타입의 숫자를 Int배열로 올긴다.
-        for(int i = 0; i < str.length(); i++) {
-            String s = str.substring(i, i+1);
-            arr[i] = Integer.parseInt(s);
-        }
-
-        //내림차순 정렬
-        for(int j = 0; j < str.length()-1; j++){
-            for(int i = 0; i < str.length()-1; i++) {
-                if (arr[i] < arr[i+1]) {
-                    int tmp = arr[i+1];
-                    arr[i+1] = arr[i];
-                    arr[i] = tmp;
-                }
-            }
-        }
-
-        for(int i = 0; i < str.length(); i++){
-            answer += arr[i];
-        }
-
-        return Long.parseLong(answer);
+    public static boolean solution2(int x) {
+        int sum = String.valueOf(x).chars().map(ch -> ch - '0').sum(); // ch - 0 = 아스키코드 이용
+        return x % sum == 0;
     }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        long s = sc.nextLong();
+        int s = sc.nextLong();
 
-        long result = Level01_11.solution2(s);
+        int result = Level01_11.solution2(s);
         System.out.print(result);
 
     }
