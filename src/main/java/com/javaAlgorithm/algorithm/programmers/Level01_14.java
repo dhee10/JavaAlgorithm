@@ -32,7 +32,7 @@ public class Level01_11 {
         Scanner sc = new Scanner(System.in);
         String[] seoul = {"dddd","rka", "accc","kim","dddd"};
 
-        String result = Level01_11.solution2(seoul);
+        String result = Level01_14.solution2(seoul);
         System.out.print(result);
 
     }

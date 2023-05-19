@@ -40,7 +40,7 @@ public class Level01_11 {
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();
 
-        int result = Level01_11.solution(num);
+        int result = Level01_13.solution(num);
         System.out.print(result);
 
     }

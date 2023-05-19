@@ -30,7 +30,7 @@ public class Level01_11 {
         int a = sc.nextInt();
         int b = sc.nextInt();
 
-        int result = Level01_11.solution2(a,b);
+        int result = Level01_12.solution2(a,b);
         System.out.print(result);
 
     }
