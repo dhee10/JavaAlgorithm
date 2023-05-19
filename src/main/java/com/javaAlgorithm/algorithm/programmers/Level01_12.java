@@ -10,7 +10,7 @@ package com.javaAlgorithm.algorithm.programmers;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Level01_11 {
+public class Level01_12 {
     public static long solution(int a, int b) {
         long answer = 0;
 

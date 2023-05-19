@@ -10,7 +10,7 @@ seoul에 "Kim"은 오직 한 번만 나타나며 잘못된 값이 입력되는 �
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Level01_11 {
+public class Level01_14 {
 
     public static String solution(String[] seoul) {
         String answer = "";

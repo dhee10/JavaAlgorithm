@@ -1,16 +1,19 @@
 package com.javaAlgorithm.algorithm.programmers;
 
 /*
-String형 배열 seoul의 element중 "Kim"의 위치 x를 찾아, "김서방은 x에 있다"는 String을 반환하는 함수, solution을 완성하세요.
-seoul에 "Kim"은 오직 한 번만 나타나며 잘못된 값이 입력되는 경우는 없습니다.
+array의 각 element 중 divisor로 나누어 떨어지는 값을 오름차순으로 정렬한 배열을 반환하는 함수, solution을 작성해주세요.
+divisor로 나누어 떨어지는 element가 하나도 없다면 배열에 -1을 담아 반환하세요
 
+예시
+arr	            divisor	  return
+[5, 9, 7, 10]   	5	  [5, 10]
 * */
 
 
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Level01_11 {
+public class Level01_15 {
 
     public static int[] solution(int[] arr, int divisor) {
         ArrayList<Integer> list = new ArrayList();

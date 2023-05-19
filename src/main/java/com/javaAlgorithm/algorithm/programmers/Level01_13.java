@@ -16,7 +16,7 @@ package com.javaAlgorithm.algorithm.programmers;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Level01_11 {
+public class Level01_13 {
 
     public static int solution(int num) {
         long lnum = num; //오버플로우 방지를 위한 형변환
