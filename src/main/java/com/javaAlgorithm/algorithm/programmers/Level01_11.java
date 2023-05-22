@@ -8,7 +8,6 @@ package com.javaAlgorithm.algorithm.programmers;
 * */
 
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Level01_11 {
@@ -32,9 +31,9 @@ public class Level01_11 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int s = sc.nextLong();
+        int s = sc.nextInt();
 
-        int result = Level01_11.solution2(s);
+        boolean result = Level01_11.solution2(s);
         System.out.print(result);
 
     }

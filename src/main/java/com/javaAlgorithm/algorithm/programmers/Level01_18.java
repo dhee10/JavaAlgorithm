@@ -21,25 +21,18 @@ public class Level01_18 {
     public static int solution(int[] numbers) {
         int answer = 0;
         Arrays.sort(numbers);
-        int[] base = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 
-
-        for (int i = 0; i < base.length; i++) {
-            for (int j = 0; j < numbers.length; j++) {
-                if(base[i] != numbers[j]){
-                    answer += base[i];
-                }
-            }
-
+        for (int i = 0; i < numbers.length; i++) {
+            answer = answer + numbers[i];
         }
 
-        return answer;
+        // 0~9까지 더한 값 - numbers에 있는 수 들의 합 = 배열에 있지 않은 수의 합
+        return answer = 45 - answer;
     }
 
 
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
         int[] numbers = {1,2,3,4,6,7,8,0};
 
         int result = Level01_18.solution(numbers);

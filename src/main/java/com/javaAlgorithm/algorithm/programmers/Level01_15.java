@@ -10,7 +10,9 @@ arr	            divisor	  return
 * */
 
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Level01_15 {
@@ -54,7 +56,7 @@ public class Level01_15 {
         int[] arr = {5, 9, 7, 10};
         int divisor = 5;
 
-        int[] result result = Level01_15.solution2(arr,divisor);
+        int[] result = Level01_15.solution2(arr,divisor);
         for (int i : result) {
             System.out.print(i+" ");
         }
