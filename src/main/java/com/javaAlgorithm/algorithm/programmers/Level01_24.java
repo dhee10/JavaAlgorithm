@@ -10,8 +10,8 @@ package com.javaAlgorithm.algorithm.programmers;
     1 ≤ left ≤ right ≤ 1,000
     입출력 예
     left	right	result
-    13	17	43
-    24	27	52
+    13  	17	    43
+    24	    27	    52
 
 #입출력 예 설명
     [입출력 예 #1]
@@ -34,17 +34,8 @@ public class Level01_24 {
 
     public static int solution(int left, int right) {
         int answer = 0;
-        int start = 0;
-        int end = 0;
-        if (left > right) {
-            start = right;
-            end = left;
-        } else {
-            start = left;
-            end = right;
-        }
 
-        for (int i = start; i <= end; i++) {
+        for (int i = left; i <= right; i++) {
             ArrayList<Integer> list = new ArrayList<>();
 
             for (int j = 1; j <= i; j++) {
@@ -61,33 +52,26 @@ public class Level01_24 {
 
     public static int solution2(int left, int right) {
         int answer = 0;
-        int start = 0;
-        int end = 0;
-        if (left > right) {
-            start = right;
-            end = left;
-        } else {
-            start = left;
-            end = right;
-        }
 
-        for (int i = start; i < end; i++) {
-            // 제곱수인 경우 약수의 갯수가 홀수이다
-            if (i % Math.sqrt(i) == 0) {
+        for (int i=left;i<=right;i++) {
+            //제곱수인 경우 약수의 개수가 홀수 (제곱수는 항상 약수가(제곱근+본인+1) 이런식으로나오므로 홀수
+            if (i % Math.sqrt(i) == 0) { //제곱근을 구한 후 본인으로 나눴을때 0이면 제곱수
                 answer -= i;
-            } else {
+            }
+            //제곱수가 아닌 경우 약수의 개수가 짝수
+            else {
                 answer += i;
             }
-
         }
+
         return answer;
     }
 
     public static void main(String[] args) {
-        int left = 24;
-        int right = 27;
+        int left = 13;
+        int right = 17;
 
-        int result = Level01_24.solution(left,right);
+        int result = Level01_24.solution2(left,right);
 
         System.out.println(result);
     }
