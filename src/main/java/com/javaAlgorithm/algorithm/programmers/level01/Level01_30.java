@@ -41,12 +41,25 @@ public class Level01_30 {
 
         return list.stream().mapToInt(Integer::intValue).toArray();
     }
+    public static int[] solution2(int []arr) {
+        int[] answer = {};
+        ArrayList<Integer> list = new ArrayList<>();
+        int preNum = 10;
+        for (int i : arr) {
+            if (preNum != i) {
+                list.add(i);
+            }
+            preNum = i;
+        }
+
+        return list.stream().mapToInt(Integer::intValue).toArray();
+    }
 
     public static void main(String[] args) {
         int[] arr = {1, 1, 3, 3, 0, 1, 1};
 
 
-        int[] solution = solution(arr);
+        int[] solution = solution2(arr);
         for (int i = 0; i < solution.length; i++) {
             System.out.print(solution[i]+"  ");
         }
