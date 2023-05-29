@@ -27,7 +27,7 @@ public class Quick_Sort {
             return;
         }
 
-        // partition = 각 회사의 정렬을 수행하는 함수
+        // partition = 각 회차의 정렬을 수행하는 함수
        int pivotPos = partition(nums, left, right);
 
         /*int pivotPos = partition(nums, left, right); 과정을 거치면
