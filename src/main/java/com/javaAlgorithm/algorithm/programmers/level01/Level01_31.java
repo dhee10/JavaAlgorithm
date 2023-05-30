@@ -29,9 +29,10 @@ package com.javaAlgorithm.algorithm.programmers.level01;
 * */
 
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Scanner;
 
-public class Level01_30 {
+public class Level01_31 {
     public static int solution(int n) {
         //3진법 변환
         String nString = Integer.toString(n, 3);
@@ -65,10 +66,11 @@ public class Level01_30 {
         int n = 45;
 
 
-        int result = Level01_30.solution2(n);
+        int result = Level01_31.solution2(n);
 
         System.out.println(result);
     }
+
 
 
 
